@@ -39,8 +39,9 @@ var agentName = "Anders";
 Console.WriteLine("[OpenAPI] Baixando especificação da Function App...");
 
 var httpClient = new HttpClient();
-var openApiSpecUrl = $"{functionAppBaseUrl}/openapi/v3.json";
+var openApiSpecUrl = $"{https://func-contosoretail-4pciv.azurewebsites.net/api}/openapi/v3.json";
 var openApiSpec = await httpClient.GetStringAsync(openApiSpecUrl);
+
 
 Console.WriteLine($"[OpenAPI] Especificação baixada ({openApiSpec.Length} bytes)");
 
